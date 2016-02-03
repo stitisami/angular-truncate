@@ -28,73 +28,31 @@
         </ul>
       </header>
       <section>
-        <p>&lt;!DOCTYPE html&gt;
+        <p>Angular Truncate</p>
 
+<p>This project is a filter for Angularjs to truncate text strings to a set number of characters or words and add ellipses when needed.</p>
+
+<p>Demo</p>
+
+<p>How to use angular truncate</p>
+
+<p>Include the javascript file.</p>
+
+
+
+<p>Inject the truncate filter into your app module.</p>
+
+<p>var myApp = angular.module('myApp', ['truncate']);
+When outputting text, apply the filter.</p>
+
+<p></p><p>
+    {{ text | characters:25 }} or {{ text | words:5 }}
 </p>
-    
-    Angular truncate text filter demo
-    
-    
-    
+By default, a word will not be truncated. Set the optional boolean after the character count to true.
 
-
-
-<div>
-
-    <h2>
-<a id="angular-truncate-demo" class="anchor" href="#angular-truncate-demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Angular Truncate Demo</h2>
-
-    <div>
-        <h4>
-<a id="example-text" class="anchor" href="#example-text" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Text</h4>
-        
-        <br><br>
-        <strong>Truncate by characters</strong>
-        Number of characters (will not break on a word):
-
-            
-        Break in the middle of words 
-
-        <h4>
-<a id="output" class="anchor" href="#output" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Output</h4>
-
-        <div>
-            <p>
-                {{ text | characters:numChars : breakOnWord }}
-            </p>
-        </div>
-        <h4>
-<a id="code" class="anchor" href="#code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code</h4>
-        <pre>{{ text | characters:{{ numChars }}: {{ breakOnWord }}}</pre>
-    </div>
-    <div>
-        <strong>Truncate by words</strong>
-        Number of words:
-        
-        
-        <h4>
-<a id="code-1" class="anchor" href="#code-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code</h4>
-        <pre>{{ text | words:{{ numWords }}:ignoreSpaces }}</pre>
-
-        <h4>
-<a id="output-1" class="anchor" href="#output-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Output</h4>
-
-        <div>
-            <p>
-                {{ text | words:numWords }}
-            </p>
-        </div>
-    </div>
-
-    <br><br>
-    <hr>
-    <p>
-        <a href="https://raw.github.com/sparkalow/angular-infinite-scroll/master/src/infinite-scroll.js">Download</a>infinite-scroll.js
-    </p>
-</div>
-
-<p>
-</p>
+<p></p><p>
+     {{ text | characters:25 :true}}
+ </p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/stitisami">stitisami</a></p>
